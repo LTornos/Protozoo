@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fe6cba29-2b9c-42ba-8166-7dc1d924d44b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1374/BackendDuplex.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="a9380bb5-a7e0-4eba-ada6-b250a1658dc9" SourceId="1" SourceUrl="http://localhost:1374/BackendDuplex.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="521513da-a72f-4e5e-b5e2-bb5ffbb36e2c" SourceId="1" SourceUrl="http://localhost:1374/BackendDuplex.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="35f4725e-ce06-40e1-9afc-3aefe82d6d78" SourceId="1" SourceUrl="http://localhost:1374/BackendDuplex.svc/mex" />
+    <MetadataFile FileName="Bll.Entities.xsd" MetadataType="Schema" ID="793140e7-83ab-4702-b0dd-2252f1379aaf" SourceId="1" SourceUrl="http://localhost:1374/BackendDuplex.svc/mex" />
+    <MetadataFile FileName="Backend.xsd" MetadataType="Schema" ID="b86ca812-6702-419f-8e4c-95c90116d8e0" SourceId="1" SourceUrl="http://localhost:1374/BackendDuplex.svc/mex" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="02850911-f8c3-403c-bdc4-693dd4f7e2b6" SourceId="1" SourceUrl="http://localhost:1374/BackendDuplex.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
