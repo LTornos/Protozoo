@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Linq;
-using Bll.Core;
 using Bll.Entities;
 using Bll.Tier1.BackendServices;
+using Protozoo.Core;
+using System.ServiceModel;
 
 namespace Bll.Tier1
 {
@@ -17,9 +18,10 @@ namespace Bll.Tier1
         }
 
         public Entity DoSomething(int context)
-        {
+        { 
             BackendServiceClient backend = new BackendServiceClient();
-            BackendDTOOfEntityExceptionQNgybuyY result = backend.Process(context);
+            BackendDTOOfEntityExceptionQNgybuyY result = null;
+            result = backend.Process(context);
             if (result.Exceptions.Count() > 0)
             { 
                 throw result.Exceptions[0];

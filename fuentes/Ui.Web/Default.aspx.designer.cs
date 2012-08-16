@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Gn.Ui.Web {
+namespace Protozoo.Ui.Web {
     
     
     public partial class _Default {

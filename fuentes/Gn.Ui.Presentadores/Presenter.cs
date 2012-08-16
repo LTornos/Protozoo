@@ -1,24 +1,16 @@
 ﻿using System;
-using Bll.Core;
 using Bll.Entities;
-using Bll.Layer2;
 using Bll.Tier1;
+using Protozoo.Core;
 
 namespace Gn.Ui.Presentadores
 {
-    public interface IView
-    {
-        int Filter { get; }
-        void SetData(object data);
-        void NotifyUser(string msg);        
-    }
-
     public class Presenter
     {
         /// <summary>
         /// Implementación de negocio para comunicación en arquitectura distribuida con exposición de Wcf
         /// </summary>
-        //private IBusiness _business = new BusinessFront();
+        private IBusiness _business = new BusinessFront();
         
         /// <summary>
         /// Implementación de negocio para comunicación en arquitectura distribuida con exposición de Wcf (Servicios Duplex)
@@ -28,7 +20,7 @@ namespace Gn.Ui.Presentadores
         /// <summary>
         /// Implementación de negocio. Sin comunicación con otros Tier's
         /// </summary>
-        private IBusiness _business = new BusinessLayer2();
+        //private IBusiness _business = new BusinessLayer2();
 
         public Presenter ()
 	    {

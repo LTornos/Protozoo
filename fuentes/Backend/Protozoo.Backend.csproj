@@ -4,12 +4,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{81DFD3E4-B325-4290-B83B-4F503D555CE4}</ProjectGuid>
+    <ProjectGuid>{C5AF29A4-A311-425B-B735-0594EDA31C42}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Gn.Ui.Web</RootNamespace>
-    <AssemblyName>Gn.Ui.Web</AssemblyName>
+    <RootNamespace>Protozoo.Backend</RootNamespace>
+    <AssemblyName>Protozoo.Backend</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,58 +31,65 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Runtime.Serialization">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.ServiceModel">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Default.aspx" />
-    <Content Include="img\bg.jpeg" />
-    <Content Include="js\jquery-1.7.2.min.js" />
-    <Content Include="js\jquery-ui-1.8.22.custom.min.js" />
+    <Content Include="BackendDuplex.svc" />
+    <Content Include="BackendService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Default.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="BackendDTO.cs" />
+    <Compile Include="BackendDuplex.svc.cs">
+      <DependentUpon>BackendDuplex.svc</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="BackendService.svc.cs">
+      <DependentUpon>BackendService.svc</DependentUpon>
     </Compile>
+    <Compile Include="IBackendDuplex.cs" />
+    <Compile Include="IDto.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="IBackendService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <ProjectReference Include="..\Bll.Core\Protozoo.Core.csproj">
+      <Project>{99F69F1B-E06C-4CA5-B137-D96CB88DCE4F}</Project>
+      <Name>Protozoo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bll.TierTwo\Bll.Tier2.csproj">
+      <Project>{F4D0B8C4-E89C-4B8B-9AEB-F9633292B09F}</Project>
+      <Name>Bll.Tier2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Protozoo.Unity\Protozoo.Unity.csproj">
+      <Project>{502881BC-1E6C-4BDB-A5B8-D787BC8DF05A}</Project>
+      <Name>Protozoo.Unity</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Gn.Ui.Presentadores\Gn.Ui.Presentadores.csproj">
-      <Project>{46170CE6-DF69-49AA-87F7-5603499B1E6E}</Project>
-      <Name>Gn.Ui.Presentadores</Name>
-    </ProjectReference>
+    <Content Include="Unity.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -102,7 +109,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1369</DevelopmentServerPort>
+          <DevelopmentServerPort>1374</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

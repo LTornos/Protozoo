@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
 using Bll.Entities;
 
 namespace Backend
 {
-    [ServiceContract]
+    [ServiceContract]    
     public interface IBackendService
     {
         [OperationContract]
+        [FaultContract(typeof(Exception))]
         BackendDTO<Entity, Exception> Process(int cmd);
 
     }   

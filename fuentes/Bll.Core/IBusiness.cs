@@ -1,7 +1,7 @@
 ﻿using System;
 using Bll.Entities;
 
-namespace Bll.Core
+namespace Protozoo.Core
 {
     public interface IBusiness
     {

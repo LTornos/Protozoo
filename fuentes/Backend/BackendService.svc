@@ -1,1 +1,6 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Backend.BackendService" CodeBehind="BackendService.svc.cs" %>
+﻿<%@ ServiceHost 
+    Language="C#" 
+    Debug="true" 
+    Service="Backend.BackendService" 
+    CodeBehind="BackendService.svc.cs" 
+    Factory="Protozoo.Unity.WCF.UnityServiceHostFactory"%>

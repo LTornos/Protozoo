@@ -2,11 +2,12 @@
 using System.Linq;
 using System.ServiceModel;
 using Bll.Tier1.Backend;
+using Protozoo.Core;
 
 namespace Bll.Tier1
 {
     [CallbackBehavior(UseSynchronizationContext = false, ConcurrencyMode = ConcurrencyMode.Single)]
-    public class BusinessFrontDuplex : Bll.Core.IBusiness, Backend.IBackendDuplexCallback, IDisposable
+    public class BusinessFrontDuplex : IBusiness, Backend.IBackendDuplexCallback, IDisposable
     {
         public event EventHandler SomethingIsHappening;
         private event EventHandler Exception;

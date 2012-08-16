@@ -2,7 +2,7 @@
 using System.ServiceModel;
 using Bll.Entities;
 using Bll.Layer2;
-using Bll.Core;
+using Protozoo.Core;
 
 namespace Backend
 {

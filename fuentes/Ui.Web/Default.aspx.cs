@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gn.Ui.Web                                //   Implementacion de vista
+namespace Protozoo.Ui.Web                                //   Implementacion de vista
 {   //                                                +----------------------------+
     public partial class _Default : System.Web.UI.Page, Gn.Ui.Presentadores.IView
     {

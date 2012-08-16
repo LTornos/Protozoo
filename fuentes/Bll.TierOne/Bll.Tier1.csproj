@@ -119,9 +119,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bll.Core\Bll.Core.csproj">
+    <ProjectReference Include="..\Bll.Core\Protozoo.Core.csproj">
       <Project>{99F69F1B-E06C-4CA5-B137-D96CB88DCE4F}</Project>
-      <Name>Bll.Core</Name>
+      <Name>Protozoo.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

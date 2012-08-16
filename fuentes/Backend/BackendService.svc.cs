@@ -1,8 +1,7 @@
 ﻿using System;
-using System.ServiceModel;
-using Bll.Core;
 using Bll.Entities;
-using Bll.Layer2;
+using Protozoo.Core;
+using System.ServiceModel;
 
 namespace Backend
 {
@@ -11,21 +10,27 @@ namespace Backend
     /// </summary>
     public class BackendService : IBackendService
     {
-        public BackendDTO<Entity,Exception> Process(int cmd)
+        private readonly IBusiness _domainObject;
+
+        public BackendService(IBusiness domainObject)
         {
-            IBusiness domainObject = new BusinessLayer2();
+            _domainObject = domainObject;        
+        }
+        
+        public BackendDTO<Entity,Exception> Process(int cmd)
+        {            
             BackendDTO<Entity, Exception> serviceMessage = new BackendDTO<Entity, Exception>();           
             // Captura el evento de negocio y lo incluye en el mensaje del servicio
-            domainObject.SomethingIsHappening+= delegate 
+            _domainObject.SomethingIsHappening+= delegate 
                 { serviceMessage.Messages.Add(new Message("Something happened", "Event")); };            
             try
             {   // Llamada a negocio                
-                serviceMessage.Data.Add(domainObject.DoSomething(cmd));
+                serviceMessage.Data.Add(_domainObject.DoSomething(cmd));
             }
             catch(Exception ex)
             {   // Se produce excepción, se incluye en el mensaje del servicio
                 serviceMessage.Exceptions.Add(ex);
-                throw new FaultException(ex.Message);                
+                //throw new FaultException(ex.Message);                
             }     
             return serviceMessage;            
         }
