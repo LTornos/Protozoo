@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ServiceModel;
-using Bll.Entities;
+using Protozoo.Core.Entities;
 
-namespace Backend
+namespace Protozoo.Backend
 {
     [ServiceContract]    
     public interface IBackendService
@@ -10,6 +10,5 @@ namespace Backend
         [OperationContract]
         [FaultContract(typeof(Exception))]
         BackendDTO<Entity, Exception> Process(int cmd);
-
     }   
 }

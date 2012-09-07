@@ -1,11 +1,12 @@
 ﻿using System;
-using Bll.Entities;
+using Protozoo.Core.Entities;
 
 namespace Protozoo.Core
 {
+    
     public interface IBusiness
     {
-        event EventHandler SomethingIsHappening;
+        event Action<string> SomethingIsHappening;
         Entity DoSomething(int context);
     }
 }

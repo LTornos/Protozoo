@@ -1,10 +1,10 @@
 ﻿
-namespace Gn.Ui.Presentadores
+namespace Protozoo.Ui.Presentadores.Views
 {
     public interface IView
-    {
+    {        
+        void SetData (object data); 
         int Filter { get; }
-        void SetData(object data);
         void NotifyUser(string msg);
     }
 }

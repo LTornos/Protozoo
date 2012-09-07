@@ -54,7 +54,7 @@
     <Compile Include="BusinessFront.cs" />
     <Compile Include="BusinessFrontDuplex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\BackendServices\Reference.cs">
+    <Compile Include="Service References\BackendDuplex\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -70,37 +70,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\BackendServices\BackendService.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\BackendServices\" />
+    <None Include="Properties\DataSources\Bll.Entities.Usuario.datasource" />
+    <None Include="Properties\DataSources\Protozoo.Core.Entities.Entity.datasource" />
+    <None Include="Service References\Backend\BackendService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bll.Core\Protozoo.Core.csproj">
+      <Project>{99F69F1B-E06C-4CA5-B137-D96CB88DCE4F}</Project>
+      <Name>Protozoo.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BackendDuplex\" />
     <WCFMetadataStorage Include="Service References\Backend\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\BackendServices\BackendService.disco" />
-    <None Include="Service References\BackendServices\BackendService.xsd" />
-    <None Include="Service References\BackendServices\BackendService1.xsd" />
-    <None Include="Service References\BackendServices\BackendService2.xsd" />
-    <None Include="Service References\BackendServices\BackendService3.xsd" />
-    <None Include="Service References\BackendServices\BackendService4.xsd" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\BackendServices\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\BackendServices\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\BackendServices\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\Backend\Backend.xsd" />
-    <None Include="Service References\Backend\Bll.Entities.xsd" />
-    <None Include="Service References\Backend\service.wsdl" />
-    <None Include="Service References\Backend\service.xsd" />
-    <None Include="Service References\Backend\service1.xsd" />
-    <None Include="Service References\Backend\System.xsd" />
+    <None Include="Service References\Backend\BackendService.disco" />
+    <None Include="Service References\Backend\BackendService.xsd" />
+    <None Include="Service References\Backend\BackendService1.xsd" />
+    <None Include="Service References\Backend\BackendService2.xsd" />
+    <None Include="Service References\Backend\BackendService3.xsd" />
+    <None Include="Service References\Backend\BackendService4.xsd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Backend\configuration91.svcinfo" />
@@ -109,8 +101,13 @@
     <None Include="Service References\Backend\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\DataSources\Bll.Entities.Usuario.datasource" />
-    <None Include="Service References\BackendServices\Bll.Tier1.BackendServices.BackendDTOOfEntityExceptionQNgybuyY.datasource">
+    <None Include="Service References\BackendDuplex\Protozoo.Backend.xsd" />
+    <None Include="Service References\BackendDuplex\Protozoo.Core.Entities.xsd" />
+    <None Include="Service References\BackendDuplex\service.wsdl" />
+    <None Include="Service References\BackendDuplex\service.xsd" />
+    <None Include="Service References\BackendDuplex\service1.xsd" />
+    <None Include="Service References\BackendDuplex\System.xsd" />
+    <None Include="Service References\Backend\Bll.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Backend\Reference.svcmap">
@@ -119,10 +116,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bll.Core\Protozoo.Core.csproj">
-      <Project>{99F69F1B-E06C-4CA5-B137-D96CB88DCE4F}</Project>
-      <Name>Protozoo.Core</Name>
-    </ProjectReference>
+    <None Include="Service References\BackendDuplex\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BackendDuplex\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BackendDuplex\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

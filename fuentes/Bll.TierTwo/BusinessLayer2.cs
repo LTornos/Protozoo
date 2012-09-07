@@ -1,6 +1,6 @@
 ﻿using System;
-using Bll.Entities;
 using Protozoo.Core;
+using Protozoo.Core.Entities;
 
 namespace Bll.Layer2
 {
@@ -8,15 +8,15 @@ namespace Bll.Layer2
     {
         public Entity DoSomething(int context)
         {
-            SomethingIsHappening(this, EventArgs.Empty);
+            SomethingIsHappening("Antes de validar reglas");
             if (context!=0)
             {
-                SomethingIsHappening(this, EventArgs.Empty);
+                SomethingIsHappening("Reglas validadas");
                 return new Entity("John Doe","D000001");
             }        
            throw new Exception("Rule broken doing something");
         }
 
-        public event EventHandler SomethingIsHappening = delegate { };
+        public event Action<string> SomethingIsHappening = delegate { };
     }
 }

@@ -8,14 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Bll.Tier1.Backend {
+namespace Bll.Tier1.BackendDuplex {
     using System.Runtime.Serialization;
     using System;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BackendDTOOfEntityExceptionwB_PKy7mS", Namespace="http://schemas.datacontract.org/2004/07/Backend")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BackendDTOOfEntityExceptionwB_PKy7mS", Namespace="http://schemas.datacontract.org/2004/07/Protozoo.Backend")]
     [System.SerializableAttribute()]
     public partial class BackendDTOOfEntityExceptionwB_PKy7mS : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -29,7 +29,7 @@ namespace Bll.Tier1.Backend {
         private System.Exception[] ExceptionsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Bll.Tier1.Backend.Message[] MessagesField;
+        private Bll.Tier1.BackendDuplex.Message[] MessagesField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -68,7 +68,7 @@ namespace Bll.Tier1.Backend {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Bll.Tier1.Backend.Message[] Messages {
+        public Bll.Tier1.BackendDuplex.Message[] Messages {
             get {
                 return this.MessagesField;
             }
@@ -92,7 +92,7 @@ namespace Bll.Tier1.Backend {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Message", Namespace="http://schemas.datacontract.org/2004/07/Backend")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Message", Namespace="http://schemas.datacontract.org/2004/07/Protozoo.Backend")]
     [System.SerializableAttribute()]
     public partial class Message : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -152,42 +152,49 @@ namespace Bll.Tier1.Backend {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Backend.IBackendService")]
-    public interface IBackendService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BackendDuplex.IBackendDuplex", CallbackContract=typeof(Bll.Tier1.BackendDuplex.IBackendDuplexCallback), SessionMode=System.ServiceModel.SessionMode.Required)]
+    public interface IBackendDuplex {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBackendService/Process", ReplyAction="http://tempuri.org/IBackendService/ProcessResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IBackendService/ProcessExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
-        Bll.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS Process(int cmd);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBackendDuplex/Process", ReplyAction="http://tempuri.org/IBackendDuplex/ProcessResponse")]
+        Protozoo.Core.Entities.Entity Process(int cmd);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    public interface IBackendServiceChannel : Bll.Tier1.Backend.IBackendService, System.ServiceModel.IClientChannel {
+    public interface IBackendDuplexCallback {
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IBackendDuplex/Notify")]
+        void Notify(Bll.Tier1.BackendDuplex.BackendDTOOfEntityExceptionwB_PKy7mS msg);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    public interface IBackendDuplexChannel : Bll.Tier1.BackendDuplex.IBackendDuplex, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    public partial class BackendServiceClient : System.ServiceModel.ClientBase<Bll.Tier1.Backend.IBackendService>, Bll.Tier1.Backend.IBackendService {
+    public partial class BackendDuplexClient : System.ServiceModel.DuplexClientBase<Bll.Tier1.BackendDuplex.IBackendDuplex>, Bll.Tier1.BackendDuplex.IBackendDuplex {
         
-        public BackendServiceClient() {
+        public BackendDuplexClient(System.ServiceModel.InstanceContext callbackInstance) : 
+                base(callbackInstance) {
         }
         
-        public BackendServiceClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
+        public BackendDuplexClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
+                base(callbackInstance, endpointConfigurationName) {
         }
         
-        public BackendServiceClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+        public BackendDuplexClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public BackendServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+        public BackendDuplexClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public BackendServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
+        public BackendDuplexClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, binding, remoteAddress) {
         }
         
-        public Bll.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS Process(int cmd) {
+        public Protozoo.Core.Entities.Entity Process(int cmd) {
             return base.Channel.Process(cmd);
         }
     }

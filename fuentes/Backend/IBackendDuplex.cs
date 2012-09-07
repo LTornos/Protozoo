@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ServiceModel;
-using Bll.Entities;
+using Protozoo.Core.Entities;
 
-namespace Backend
+namespace Protozoo.Backend
 {
     [ServiceContract(CallbackContract = typeof(IBackendDuplexCallback), SessionMode=SessionMode.Required)]
     public interface IBackendDuplex

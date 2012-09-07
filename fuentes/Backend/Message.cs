@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Backend
+namespace Protozoo.Backend
 {
     [DataContract]
     public class Message

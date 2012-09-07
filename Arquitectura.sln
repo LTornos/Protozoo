@@ -2,12 +2,18 @@
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protozoo.Ui.Web", "fuentes\Ui.Web\Protozoo.Ui.Web.csproj", "{81DFD3E4-B325-4290-B83B-4F503D555CE4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C5AF29A4-A311-425B-B735-0594EDA31C42} = {C5AF29A4-A311-425B-B735-0594EDA31C42}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protozoo.Core", "fuentes\Bll.Core\Protozoo.Core.csproj", "{99F69F1B-E06C-4CA5-B137-D96CB88DCE4F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protozoo.Backend", "fuentes\Backend\Protozoo.Backend.csproj", "{C5AF29A4-A311-425B-B735-0594EDA31C42}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bll.Tier1", "fuentes\Bll.TierOne\Bll.Tier1.csproj", "{956AE0E3-233B-407A-AC3A-C877569EA43D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C5AF29A4-A311-425B-B735-0594EDA31C42} = {C5AF29A4-A311-425B-B735-0594EDA31C42}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bll.Tier2", "fuentes\Bll.TierTwo\Bll.Tier2.csproj", "{F4D0B8C4-E89C-4B8B-9AEB-F9633292B09F}"
 EndProject

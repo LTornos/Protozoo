@@ -63,12 +63,13 @@
     <Content Include="img\bg.jpeg" />
     <Content Include="js\jquery-1.7.2.min.js" />
     <Content Include="js\jquery-ui-1.8.22.custom.min.js" />
+    <None Include="Properties\DataSources\Protozoo.Core.Entities.Entity.datasource" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -79,6 +80,14 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bll.Core\Protozoo.Core.csproj">
+      <Project>{99F69F1B-E06C-4CA5-B137-D96CB88DCE4F}</Project>
+      <Name>Protozoo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bll.TierOne\Bll.Tier1.csproj">
+      <Project>{956AE0E3-233B-407A-AC3A-C877569EA43D}</Project>
+      <Name>Bll.Tier1</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gn.Ui.Presentadores\Protozoo.Ui.Presentadores.csproj">
       <Project>{46170CE6-DF69-49AA-87F7-5603499B1E6E}</Project>
       <Name>Protozoo.Ui.Presentadores</Name>

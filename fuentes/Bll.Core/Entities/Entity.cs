@@ -1,4 +1,4 @@
-﻿namespace Bll.Entities
+﻿namespace Protozoo.Core.Entities
 {
     public class Entity 
     {

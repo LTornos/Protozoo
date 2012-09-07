@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Bll.Entities;
-using Bll.Tier1.BackendServices;
 using Protozoo.Core;
-using System.ServiceModel;
+using Protozoo.Core.Entities;
+using Bll.Tier1.Backend;
 
 namespace Bll.Tier1
 {
@@ -20,7 +19,7 @@ namespace Bll.Tier1
         public Entity DoSomething(int context)
         { 
             BackendServiceClient backend = new BackendServiceClient();
-            BackendDTOOfEntityExceptionQNgybuyY result = null;
+            Backend.BackendDTOOfEntityExceptionwB_PKy7mS result = null;
             result = backend.Process(context);
             if (result.Exceptions.Count() > 0)
             { 
@@ -31,7 +30,7 @@ namespace Bll.Tier1
                     switch (m.Type)
                     {
                         case "Event":                            
-                            SomethingIsHappening(this, EventArgs.Empty);
+                            SomethingIsHappening(m.Text);
                             break;
                     }
                 }
@@ -39,6 +38,6 @@ namespace Bll.Tier1
             return result.Data[0];
         }
 
-        public event EventHandler SomethingIsHappening;
+        public event Action<String> SomethingIsHappening;
     }
 }

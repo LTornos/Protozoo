@@ -1,9 +1,8 @@
 ﻿using System;
-using Bll.Entities;
 using Protozoo.Core;
-using System.ServiceModel;
+using Protozoo.Core.Entities;
 
-namespace Backend
+namespace Protozoo.Backend
 {
     /// <summary>
     /// Servicio de backend. Que se usará para conectar con los objetos de dominio.

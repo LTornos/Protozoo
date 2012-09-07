@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Backend.BackendDuplex" CodeBehind="BackendDuplex.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Protozoo.Backend.BackendDuplex" CodeBehind="Protozoo.BackendDuplex.svc.cs" %>

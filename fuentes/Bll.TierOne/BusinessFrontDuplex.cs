@@ -1,48 +1,49 @@
 ﻿using System;
 using System.Linq;
 using System.ServiceModel;
-using Bll.Tier1.Backend;
+using Bll.Tier1.BackendDuplex;
 using Protozoo.Core;
+using Protozoo.Core.Entities;
 
 namespace Bll.Tier1
 {
     [CallbackBehavior(UseSynchronizationContext = false, ConcurrencyMode = ConcurrencyMode.Single)]
-    public class BusinessFrontDuplex : IBusiness, Backend.IBackendDuplexCallback, IDisposable
+    public class BusinessFrontDuplex : IBusiness, IBackendDuplexCallback, IDisposable
     {
-        public event EventHandler SomethingIsHappening;
+        public event Action<string> SomethingIsHappening;
         private event EventHandler Exception;
 
-        private BackendDuplexClient _client=null;
+        private BackendDuplexClient _client = null;
 
         public BusinessFrontDuplex()
         {
             this.SomethingIsHappening += delegate { };
         }
 
-        public Bll.Entities.Entity DoSomething(int context)
+        public Entity DoSomething(int context)
         {
             InstanceContext instanceContext = new InstanceContext(this);
             _client = new BackendDuplexClient(instanceContext);
-             
+
             (_client as ICommunicationObject).Faulted += new EventHandler(BusinessFrontDuplex_Faulted);
             try
             {
-                return _client.Process(context);                
+                return _client.Process(context);
             }
-            catch 
-            { 
-                throw; 
+            catch
+            {
+                throw;
             }
         }
 
         // NO LLAMAR DIRECTAMENTE A ESTE MÉTODO JAMÁS.
         void BusinessFrontDuplex_Faulted(object sender, EventArgs e)
         {
-            this.Exception(this, EventArgs.Empty);
+          //  this.Exception(this, EventArgs.Empty);
         }
-      
+
         // Metodo para el callback desde el servicio remoto.
-        public void Notify(Bll.Tier1.Backend.BackendDTOOfUsuarioExceptionQNgybuyY result)
+        public void Notify(BackendDTOOfEntityExceptionwB_PKy7mS result)
         {
             if (result.Exceptions.Count() <= 0)
             {
@@ -51,15 +52,15 @@ namespace Bll.Tier1
                     switch (m.Type)
                     {
                         case "Event":
-                            this.SomethingIsHappening(this, EventArgs.Empty);
+                            this.SomethingIsHappening(m.Text);
                             break;
                     }
                 }
-            }            
+            }
         }
 
         public void Dispose()
-        {            
+        {
             _client.Close();
         }
     }
