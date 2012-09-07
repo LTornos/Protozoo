@@ -10,7 +10,7 @@ namespace Protozoo.Ui.Presentadores
     {
         private static IUnityContainer _container = new UnityContainer();
 
-        private const string _RESOLVE_IMPLEMENTATION_ = "Remote-duplex";
+        private const string _RESOLVE_IMPLEMENTATION_ = "Remote";
 
         static PresenterLocator()
         {

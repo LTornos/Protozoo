@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{956AE0E3-233B-407A-AC3A-C877569EA43D}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -74,7 +74,6 @@
   <ItemGroup>
     <None Include="Properties\DataSources\Bll.Entities.Usuario.datasource" />
     <None Include="Properties\DataSources\Protozoo.Core.Entities.Entity.datasource" />
-    <None Include="Service References\Backend\BackendService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bll.Core\Protozoo.Core.csproj">
@@ -87,33 +86,12 @@
     <WCFMetadataStorage Include="Service References\Backend\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Backend\BackendService.disco" />
-    <None Include="Service References\Backend\BackendService.xsd" />
-    <None Include="Service References\Backend\BackendService1.xsd" />
-    <None Include="Service References\Backend\BackendService2.xsd" />
-    <None Include="Service References\Backend\BackendService3.xsd" />
-    <None Include="Service References\Backend\BackendService4.xsd" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Backend\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Backend\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\BackendDuplex\Protozoo.Backend.xsd" />
     <None Include="Service References\BackendDuplex\Protozoo.Core.Entities.xsd" />
     <None Include="Service References\BackendDuplex\service.wsdl" />
     <None Include="Service References\BackendDuplex\service.xsd" />
     <None Include="Service References\BackendDuplex\service1.xsd" />
     <None Include="Service References\BackendDuplex\System.xsd" />
-    <None Include="Service References\Backend\Bll.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Backend\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\BackendDuplex\configuration91.svcinfo" />
@@ -123,6 +101,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\BackendDuplex\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Backend\BackendService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Backend\BackendService.disco" />
+    <None Include="Service References\Backend\BackendService.xsd" />
+    <None Include="Service References\Backend\BackendService1.xsd" />
+    <None Include="Service References\Backend\BackendService2.xsd" />
+    <None Include="Service References\Backend\BackendService3.xsd" />
+    <None Include="Service References\Backend\BackendService4.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Backend\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Backend\Bll.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Backend\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

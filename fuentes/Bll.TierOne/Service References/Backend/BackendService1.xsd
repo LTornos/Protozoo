@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Backend" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Backend" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Protozoo.Backend" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Protozoo.Backend" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:1374/BackendService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Protozoo.Core.Entities" />
   <xs:import schemaLocation="http://localhost:1374/BackendService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
   <xs:complexType name="BackendDTOOfEntityExceptionwB_PKy7mS">
     <xs:annotation>
       <xs:appinfo>
-        <GenericType Name="BackendDTOOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/Backend" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+        <GenericType Name="BackendDTOOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/Protozoo.Backend" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
           <GenericParameter Name="Entity" Namespace="http://schemas.datacontract.org/2004/07/Protozoo.Core.Entities" />
           <GenericParameter Name="Exception" Namespace="http://schemas.datacontract.org/2004/07/System" />
         </GenericType>
