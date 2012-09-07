@@ -15,10 +15,10 @@ namespace Protozoo.Backend
             IBusiness domainObject = new BusinessLayer2();
             BackendDTO<Entity, Exception> serviceMessage = new BackendDTO<Entity, Exception>();
             // Captura el evento de negocio y lo incluye en el mensaje del servicio
-            domainObject.SomethingIsHappening += delegate 
+            domainObject.SomethingIsHappening += msg => 
                 {
                     BackendDTO<Entity, Exception> message = new BackendDTO<Entity, Exception>();
-                    message.Messages.Add(new Message("Something happened " + DateTime.Now.ToString(), "Event"));
+                    message.Messages.Add(new Message("Something happened <" + msg + "> " + DateTime.Now.ToString(), "Event"));
                     Callback.Notify(message);
                 };
             try
