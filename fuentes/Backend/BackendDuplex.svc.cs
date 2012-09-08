@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ServiceModel;
-using Bll.Layer2;
 using Protozoo.Core;
 using Protozoo.Core.Entities;
+using Protozoo.Core.Tier2;
 
 namespace Protozoo.Backend
 {

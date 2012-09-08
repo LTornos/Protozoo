@@ -1,8 +1,8 @@
-﻿using Bll.Layer2;
-using Bll.Tier1;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
 using Protozoo.Core;
 using Protozoo.Ui.Presentadores.Views;
+using Protozoo.Core.Tier1;
+using Protozoo.Core.Tier2;
 
 namespace Protozoo.Ui.Presentadores
 {

@@ -2,7 +2,7 @@
 using Protozoo.Core;
 using Protozoo.Core.Entities;
 
-namespace Bll.Layer2
+namespace Protozoo.Core.Tier2
 {
     public class BusinessLayer2: IBusiness
     {

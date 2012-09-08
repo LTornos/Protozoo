@@ -4,7 +4,7 @@ using Protozoo.Core;
 using Protozoo.Core.Entities;
 using Protozoo.Core.Tier1.Backend;
 
-namespace Bll.Tier1
+namespace Protozoo.Core.Tier1
 {
     /// <summary>
     /// Implementación de la interfaz de negocio para la capa de Servidor de aplicaciones Web.
