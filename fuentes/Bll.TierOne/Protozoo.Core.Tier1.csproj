@@ -8,8 +8,8 @@
     <ProjectGuid>{956AE0E3-233B-407A-AC3A-C877569EA43D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Bll.Tier1</RootNamespace>
-    <AssemblyName>Bll.Tier1</AssemblyName>
+    <RootNamespace>Protozoo.Core.Tier1</RootNamespace>
+    <AssemblyName>Protozoo.Core.Tier1</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -118,7 +118,7 @@
     <None Include="Service References\Backend\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Backend\Bll.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS.datasource">
+    <None Include="Service References\Backend\Protozoo.Core.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Backend\Reference.svcmap">

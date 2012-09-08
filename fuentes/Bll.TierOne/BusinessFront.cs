@@ -2,7 +2,7 @@
 using System.Linq;
 using Protozoo.Core;
 using Protozoo.Core.Entities;
-using Bll.Tier1.Backend;
+using Protozoo.Core.Tier1.Backend;
 
 namespace Bll.Tier1
 {
@@ -19,7 +19,7 @@ namespace Bll.Tier1
         public Entity DoSomething(int context)
         { 
             BackendServiceClient backend = new BackendServiceClient();
-            Backend.BackendDTOOfEntityExceptionwB_PKy7mS result = null;
+            BackendDTOOfEntityExceptionwB_PKy7mS result = null;
             result = backend.Process(context);
             if (result.Exceptions.Count() > 0)
             { 

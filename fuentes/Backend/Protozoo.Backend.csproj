@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{C5AF29A4-A311-425B-B735-0594EDA31C42}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -79,9 +79,9 @@
       <Project>{99F69F1B-E06C-4CA5-B137-D96CB88DCE4F}</Project>
       <Name>Protozoo.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Bll.TierTwo\Bll.Tier2.csproj">
+    <ProjectReference Include="..\Bll.TierTwo\Protozoo.Core.Tier2.csproj">
       <Project>{F4D0B8C4-E89C-4B8B-9AEB-F9633292B09F}</Project>
-      <Name>Bll.Tier2</Name>
+      <Name>Protozoo.Core.Tier2</Name>
     </ProjectReference>
     <ProjectReference Include="..\Protozoo.Unity\Protozoo.Unity.csproj">
       <Project>{502881BC-1E6C-4BDB-A5B8-D787BC8DF05A}</Project>
@@ -114,9 +114,6 @@
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

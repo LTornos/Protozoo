@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Bll.Tier1.Backend {
+namespace Protozoo.Core.Tier1.Backend {
     using System.Runtime.Serialization;
     using System;
     
@@ -29,7 +29,7 @@ namespace Bll.Tier1.Backend {
         private System.Exception[] ExceptionsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Bll.Tier1.Backend.Message[] MessagesField;
+        private Protozoo.Core.Tier1.Backend.Message[] MessagesField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -68,7 +68,7 @@ namespace Bll.Tier1.Backend {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Bll.Tier1.Backend.Message[] Messages {
+        public Protozoo.Core.Tier1.Backend.Message[] Messages {
             get {
                 return this.MessagesField;
             }
@@ -157,16 +157,16 @@ namespace Bll.Tier1.Backend {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBackendService/Process", ReplyAction="http://tempuri.org/IBackendService/ProcessResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.Exception), Action="http://tempuri.org/IBackendService/ProcessExceptionFault", Name="Exception", Namespace="http://schemas.datacontract.org/2004/07/System")]
-        Bll.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS Process(int cmd);
+        Protozoo.Core.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS Process(int cmd);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    public interface IBackendServiceChannel : Bll.Tier1.Backend.IBackendService, System.ServiceModel.IClientChannel {
+    public interface IBackendServiceChannel : Protozoo.Core.Tier1.Backend.IBackendService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    public partial class BackendServiceClient : System.ServiceModel.ClientBase<Bll.Tier1.Backend.IBackendService>, Bll.Tier1.Backend.IBackendService {
+    public partial class BackendServiceClient : System.ServiceModel.ClientBase<Protozoo.Core.Tier1.Backend.IBackendService>, Protozoo.Core.Tier1.Backend.IBackendService {
         
         public BackendServiceClient() {
         }
@@ -187,7 +187,7 @@ namespace Bll.Tier1.Backend {
                 base(binding, remoteAddress) {
         }
         
-        public Bll.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS Process(int cmd) {
+        public Protozoo.Core.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS Process(int cmd) {
             return base.Channel.Process(cmd);
         }
     }
