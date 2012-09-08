@@ -27,15 +27,27 @@ namespace Protozoo.Test.DAL.Core
         public interface FooMapped {}
 
         [Test]
-        public void get_name_from_type()
+        public void get_command_name_from_type()
         { 
             Assert.AreEqual("Foo", ModelInspector.GetCommandName(typeof(Foo)));
         }
 
         [Test]
-        public void get_name_from_model_is_not_a_stored_procedure()
+        public void get_command_name_from_model_is_not_a_stored_procedure()
         {
             Assert.AreEqual(String.Empty, ModelInspector.GetCommandName(typeof(NotFoo)));
+        }
+
+        [Test]
+        public void get_command_name_from_type_generic_method()
+        {
+            Assert.AreEqual("Foo", ModelInspector.GetCommandName<Foo>());
+        }
+
+        [Test]
+        public void get_command_name_from_model_is_not_a_stored_procedure_generic_method()
+        {
+            Assert.AreEqual(String.Empty, ModelInspector.GetCommandName<NotFoo>());
         }
 
         [Test]

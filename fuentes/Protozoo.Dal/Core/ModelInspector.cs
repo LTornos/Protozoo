@@ -6,6 +6,11 @@ namespace Protozoo.DAL.Core
 {
     public static class ModelInspector
     {
+
+        public static string GetCommandName<T>()
+        {
+            return GetCommandName(typeof(T));
+        }
         /// <summary>
         /// Obtiene el nombre del comando definido en la base de datos
         /// </summary>
