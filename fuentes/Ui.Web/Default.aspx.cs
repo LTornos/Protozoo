@@ -21,17 +21,6 @@ namespace Protozoo.Ui.Web
             ctlDo.Click += (sender, ev) => _viewController.ProcessViewRequest();
         }
 
-        protected class ViewData
-        {
-            public object Context { get; set; }
-
-            public string GetValue(string propName)
-            {
-                return Context.GetType().GetProperty(propName).GetValue(Context, null).ToString();
-            }
-        }
-
-
         #region Miembros de IView
 
         void IView.SetData(object data)
