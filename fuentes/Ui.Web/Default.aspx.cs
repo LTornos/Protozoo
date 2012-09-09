@@ -21,28 +21,6 @@ namespace Protozoo.Ui.Web
             ctlDo.Click += (sender, ev) => _viewController.ProcessViewRequest();
         }
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        public void SetData(object data)
-        {
-            _data.Context = data;
-            ctlUserAccount.Text = _data.GetValue("Account");
-            ctlUserName.Text = _data.GetValue("Name");
-        }
-                
-        public void NotifyUser(string msg)
-        {
-            ctlRes.InnerHtml += "- " + msg + "<br/>";
-        }
-        
-        public int Filter
-        {
-            get { return int.Parse(ctlDoContext.Text); }
-        }
-
         protected class ViewData
         {
             public object Context { get; set; }
@@ -52,6 +30,27 @@ namespace Protozoo.Ui.Web
                 return Context.GetType().GetProperty(propName).GetValue(Context, null).ToString();
             }
         }
-       
+
+
+        #region Miembros de IView
+
+        void IView.SetData(object data)
+        {
+            _data.Context = data;
+            ctlUserAccount.Text = _data.GetValue("Account");
+            ctlUserName.Text = _data.GetValue("Name");
+        }
+
+        int IView.Filter
+        {
+            get { return int.Parse(ctlDoContext.Text); }
+        }
+
+        void IView.NotifyUser(string msg)
+        {
+            ctlRes.InnerHtml += "- " + msg + "<br/>";
+        }
+
+        #endregion
     }
 }
