@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protozoo.Ui.Web", "fuentes\Ui.Web\Protozoo.Ui.Web.csproj", "{81DFD3E4-B325-4290-B83B-4F503D555CE4}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C5AF29A4-A311-425B-B735-0594EDA31C42} = {C5AF29A4-A311-425B-B735-0594EDA31C42}

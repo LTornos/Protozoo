@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="BackendDTOOfEntityExceptionwB_PKy7mS" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>Protozoo.Core.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS, Service References.Backend.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>Protozoo.Core.Tier1.Backend.BackendDTOOfEntityExceptionwB_PKy7mS</TypeInfo>
 </GenericObjectDataSource>

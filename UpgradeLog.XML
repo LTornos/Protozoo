@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Arquitectura">
+</Property><Property Name="Solution File" Value="C:\DATOS\Proyectos\4.0\Protozoo\Arquitectura.sln">
+</Property><Property Name="Date" Value="viernes, 21 de septiembre de 2012">
+</Property><Property Name="Time" Value="21:52">
+</Property></Properties><Event ErrorLevel="0" Project="Protozoo.Ui.Web" Source="fuentes\Ui.Web\Protozoo.Ui.Web.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Protozoo.Ui.Web" Source="fuentes\Ui.Web\Protozoo.Ui.Web.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Protozoo.Core" Source="fuentes\Bll.Core\Protozoo.Core.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Protozoo.Core" Source="fuentes\Bll.Core\Protozoo.Core.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Protozoo.Backend" Source="fuentes\Backend\Protozoo.Backend.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Protozoo.Backend" Source="fuentes\Backend\Protozoo.Backend.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Protozoo.Core.Tier1" Source="fuentes\Bll.TierOne\Protozoo.Core.Tier1.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Protozoo.Core.Tier1" Source="fuentes\Bll.TierOne\Protozoo.Core.Tier1.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Protozoo.Core.Tier2" Source="fuentes\Bll.TierTwo\Protozoo.Core.Tier2.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Protozoo.Core.Tier2" Source="fuentes\Bll.TierTwo\Protozoo.Core.Tier2.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Protozoo.Ui.Presentadores" Source="fuentes\Gn.Ui.Presentadores\Protozoo.Ui.Presentadores.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Protozoo.Ui.Presentadores" Source="fuentes\Gn.Ui.Presentadores\Protozoo.Ui.Presentadores.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Protozoo.Unity" Source="fuentes\Protozoo.Unity\Protozoo.Unity.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Protozoo.Unity" Source="fuentes\Protozoo.Unity\Protozoo.Unity.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Protozoo.Dal" Source="fuentes\Protozoo.Dal\Protozoo.Dal.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Protozoo.Dal" Source="fuentes\Protozoo.Dal\Protozoo.Dal.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Protozoo.Test" Source="fuentes\Protozoo.Test\Protozoo.Test.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Protozoo.Test" Source="fuentes\Protozoo.Test\Protozoo.Test.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Arquitectura.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Arquitectura.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Protozoo.Ui.Web" Source="fuentes\Ui.Web\Protozoo.Ui.Web.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Protozoo.Core" Source="fuentes\Bll.Core\Protozoo.Core.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Protozoo.Backend" Source="fuentes\Backend\Protozoo.Backend.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Protozoo.Core.Tier1" Source="fuentes\Bll.TierOne\Protozoo.Core.Tier1.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Protozoo.Core.Tier2" Source="fuentes\Bll.TierTwo\Protozoo.Core.Tier2.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Protozoo.Ui.Presentadores" Source="fuentes\Gn.Ui.Presentadores\Protozoo.Ui.Presentadores.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Protozoo.Unity" Source="fuentes\Protozoo.Unity\Protozoo.Unity.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Protozoo.Dal" Source="fuentes\Protozoo.Dal\Protozoo.Dal.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Protozoo.Test" Source="fuentes\Protozoo.Test\Protozoo.Test.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
